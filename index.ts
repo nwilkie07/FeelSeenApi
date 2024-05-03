@@ -1,15 +1,14 @@
 const fs = require('fs');
 const pg = require('pg');
 const url = require('url');
-const dbConfig = require('./cert.ts');
 
 const Pool = require('pg').Pool;
 const pool = new Pool({
-    user: dbConfig.user,
-    host: dbConfig.host,
-    database: dbConfig.database,
-    password: dbConfig.password,
-    port: dbConfig.port,
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
 })
 
 const db = require('./symptom-queries.ts')
