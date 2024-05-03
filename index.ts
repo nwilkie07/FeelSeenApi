@@ -29,7 +29,7 @@ app.listen(port, () => {
     console.log(`Listening on ${port}`);
 })
 
-app.get('/api/users', db.getUsers)
+app.get('/api/users', user.getUsers)
 app.get('/api/symptoms', db.getSymptoms)
 app.get('/api/symptoms/:id', db.getSymptomById)
 app.post('/api/symptoms', db.createSymptom)
