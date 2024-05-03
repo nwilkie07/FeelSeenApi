@@ -12,6 +12,7 @@ const pool = new Pool({
 })
 
 const db = require('./symptom-queries.ts')
+const user = require("./user-queries.ts");
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -28,8 +29,9 @@ app.listen(port, () => {
     console.log(`Listening on ${port}`);
 })
 
-app.get('/symptoms', db.getSymptoms)
-app.get('/symptoms/:id', db.getSymptomById)
-app.post('/symptoms', db.createSymptom)
-app.put('/symptoms/:id', db.modifySymptom)
-app.delete('/symptoms/:id', db.deleteSymptom)
+app.get('/api/users', db.getUsers)
+app.get('/api/symptoms', db.getSymptoms)
+app.get('/api/symptoms/:id', db.getSymptomById)
+app.post('/api/symptoms', db.createSymptom)
+app.put('/api/symptoms/:id', db.modifySymptom)
+app.delete('/api/symptoms/:id', db.deleteSymptom)

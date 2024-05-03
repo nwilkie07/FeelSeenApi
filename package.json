@@ -14,5 +14,8 @@
     "twilio": "^5.0.4"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.12.8"
+  }
 }
