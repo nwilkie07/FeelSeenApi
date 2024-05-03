@@ -1,3 +1,5 @@
+const pool = require('./connection.ts');
+
 const getSymptoms = (request, response) => {
     pool.query('SELECT * FROM Symptoms ORDER BY id ASC', (error, results) => {
         if (error) {

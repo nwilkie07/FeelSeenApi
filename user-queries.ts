@@ -1,5 +1,7 @@
+const pool = require('./connection.ts');
+
 const getUsers = (request, response) => {
-    pool.query('SELECT * FROM Users ORDER BY email ASC', (error, results) => {
+    pool.query('SELECT * FROM Users', (error, results) => {
         if (error) {
             throw error;
         }
