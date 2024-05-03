@@ -1,4 +1,4 @@
-const cert = require('./cert.ts')
+// const cert = require('./cert.ts')
 const pg = require('pg');
 const { Pool } = pg;
 
