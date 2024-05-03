@@ -1,3 +1,4 @@
 #NodeJS files
 cert.ts
 pgadmin.json
+*node_modules/*
